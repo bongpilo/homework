@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+    <title>상품 기획서</title>
+    <style>
+        *{
+             font-family: 'Stylish', sans-serif;
+        }
+        .img {
+                background-image: url('http://cafefiles.naver.net/MjAyMDA1MTVfOTgg/MDAxNTg5NTA2MDczMzgw.PYAbQa6Ol2d2MNVsX2-rd29P9HZW_sl7ejhDkyekWn4g.Ss5URSya_LJ39u7klDP_sHytKT9eD9dAsw33lW7Nnbwg.JPEG/%B7%D4%B5%A5_%C0%DA%C0%CC%BE%F0%C3%F7_%BF%F8%C1%A4_%C0%AF%B4%CF%C6%FB_%BE%D5.jpg');
+                background-size: cover;
+                background-position: center;
+                width: auto;
+                height: 500px;
+            }
+        .wrap {
+            width: 500px;
+            margin: auto;
+        }
+        .order {
+            text-align: center;
+        }
+
+
+    </style>
+    <script>
+        function order() {
+            /*alert('상품이 품절되었습니다')*/
+            let name= $(`#name`).val();
+            let count= $(`#count`).val();
+            let address= $(`#address`).val();
+            let tel= $(`#tel`).val();
+
+            if(name ==''){
+                alert('이름을입력하세요');
+            }else if(count =='수량을입력하세요') {
+                alert('수량을 입력하세요');
+            }else if (address == ''){
+                alert('주소를입력하세요');
+            }else if (tel ==''){
+                alert('전화번호를 입력하세요');
+            }else {
+                alert('주문이 완료되었습니다.');
+            }
+
+        }
+        </script>
+
+<body>
+    <div class="wrap">
+    <div class="img"/>
+        </div>
+
+    <div class="body1">
+        <h1> 롯데자이언츠 원정유니폼</h1>
+        <p> 가격 : 99000원  수량 : 1개</p>
+        <p> 롯데자이언츠의 원정경기 유니폼 네이비색의과 중앙의 로고가 조화롭게 잘 이루어져 이쁜 원정유니폼</p>
+    </div>
+    <div class="body2">
+        <h1> 주문하기</h1>
+        <label for="name">주문자성함</label>
+        <input type="text" id="name">
+        <p>
+            <label for="count">수량</label>
+        <input type="text" id="count"> </p>
+        <p><label for="address">주소</label>
+        <input type="text" id="address"></p>
+        <p><label for="phone">전화번호</label>
+        <input type="text" id="phone"></p>
+        <div class="form-group">
+    <label for="exampleFormControlSelect1">사이즈</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>90</option>
+      <option>95</option>
+      <option>100</option>
+      <option>105</option>
+      <option>110</option>
+    </select>
+  </div>
+
+        <div class="order">
+            <button onclick="order()" type="button" class="btn btn-primary">주문하기</button>
+    </div>
+
+        </div>
+
+</body>
+</html>
